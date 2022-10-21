@@ -1,0 +1,6 @@
+gov_apikey.txt
+*.txt
+apikey.txt
+api_key.txt
+gov_api_key.txt
+*ipynb_checkpoints/
