@@ -18,7 +18,6 @@ The following files contain work used to fit both basic and advanced statistical
 - `advancedSupervisedLearn.ipynb`
 
 ## Next steps:
-- Simple model with basic interpretable methods (i.e., linear regression and decision trees
 - Advanced model with random forest and CATBOOST or XGBOOST
 - for each of these models, assess both 6 year and 10 year income post college entry
 - Convert shap output into dashboard
