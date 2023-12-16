@@ -30,9 +30,9 @@ def data_import():
     # eventually, will call DataCollectClean script, which will produced these csvs,
     # and then will read them in as done here
     
-    ytrain_chosen = ytrain if outcome == 6 else ytrain10
+    #ytrain_chosen = ytrain if outcome == 6 else ytrain10
 
-    return X_filled,Xtrain_filled,ytrain_chosen
+    return X_filled,Xtrain_filled,ytrain
 
 X_filled,Xtrain_filled,ytrain = data_import()
 
