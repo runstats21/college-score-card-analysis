@@ -11,6 +11,12 @@ Full details on the data collection process can be found in another one of my bl
 ## SHAP: Interpretable ML/Explainable AI
 `simpleModel+shap.ipynb` shows some intriguing visualizations not only in regards to factors related to expected income 6 years post college entry, but also into the ability of using the [shap](https://shap.readthedocs.io/en/latest/index.html) python package to "open the black box" of ML models.
 
+## Statistical/ML Modeling
+The following files contain work used to fit both basic and advanced statistical models to effectively estimate expected income of college students 6 years post-entry:
+
+- `simpleSupervisedOLS+Lasso.ipynb`
+- `advancedSupervisedLearn.ipynb`
+
 ## Next steps:
 - Simple model with basic interpretable methods (i.e., linear regression and decision trees
 - Advanced model with random forest and CATBOOST or XGBOOST
