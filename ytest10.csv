@@ -1,0 +1,522 @@
+School Name,Mean Earnings (10 Yrs after Entry)
+Waynesburg University,51200.0
+Franklin University,53800.0
+Rush University,125000.0
+Flagler College,42200.0
+Medaille College,44200.0
+The University of Montana-Western,36700.0
+Lake Superior State University,42000.0
+University of San Diego,71100.0
+Polytechnic University of Puerto Rico-Miami,36300.0
+Haverford College,75100.0
+Spring Hill College,51300.0
+Amherst College,83300.0
+The University of Alabama,51600.0
+Pontifical Catholic University of Puerto Rico-Mayaguez,21400.0
+Maranatha Baptist University,38700.0
+University of Maine at Fort Kent,37700.0
+Youngstown State University,40200.0
+Abilene Christian University,48900.0
+The College of Wooster,53000.0
+University of Massachusetts-Lowell,57200.0
+Oregon State University,56700.0
+Lycoming College,49400.0
+Tufts University,103300.0
+Gwynedd Mercy University,56500.0
+Eureka College,40500.0
+Western Colorado University,43400.0
+Voorhees College,26100.0
+Greenville University,39900.0
+University of Mount Olive,43700.0
+Florida State University,53900.0
+Siena College,62300.0
+Pennsylvania College of Art and Design,30600.0
+Baptist Health Sciences University,56000.0
+Mount Saint Mary College,51700.0
+Texas A & M University-Corpus Christi,48600.0
+Rutgers University-Camden,68100.0
+Strayer University-Delaware,53500.0
+Benedictine College,45000.0
+Caldwell University,48700.0
+Pacific Union College,61700.0
+American International College,50000.0
+Austin College,52800.0
+Herzing University-Minneapolis,41600.0
+Dean College,38100.0
+Muskingum University,43500.0
+University of Missouri-Kansas City,57200.0
+Paul Quinn College,29800.0
+Strayer University-South Carolina,53500.0
+Oakland University,48100.0
+DeSales University,54700.0
+University of Wisconsin-Platteville,51200.0
+Marymount California University,42000.0
+Hamline University,55500.0
+Multnomah University,38100.0
+Valdosta State University,41600.0
+Mount Saint Joseph University,44600.0
+Rollins College,53100.0
+Southeastern Oklahoma State University,41000.0
+Mount Carmel College of Nursing,58100.0
+New York Institute of Technology,68100.0
+Binghamton University,68100.0
+Hebrew Theological College,26700.0
+Wilberforce University,38400.0
+Strayer University-New Jersey,53500.0
+University of Illinois Springfield,49900.0
+Mercy College of Health Sciences,48000.0
+Rutgers University-New Brunswick,68100.0
+Pennsylvania Academy of the Fine Arts,26300.0
+Loyola Marymount University,71600.0
+Colorado Technical University-Colorado Springs,51300.0
+Dickinson State University,49300.0
+Arkansas Tech University,38600.0
+Saint Elizabeth University,49200.0
+Franklin and Marshall College,69200.0
+Academy of Art University,47300.0
+Wesleyan College,37600.0
+American University of Health Sciences,37800.0
+SUNY College of Technology at Canton,39600.0
+Life Pacific University,34400.0
+Chestnut Hill College,46800.0
+Morehead State University,37000.0
+New Jersey City University,46000.0
+Goucher College,55100.0
+Emmanuel College,35400.0
+Washington Adventist University,46300.0
+Polytechnic University of Puerto Rico-Orlando,36300.0
+Tougaloo College,32400.0
+Merrimack College,62200.0
+Edgewood College,47600.0
+Antioch University-Santa Barbara,41800.0
+The University of the Arts,39100.0
+California State University-Dominguez Hills,48500.0
+West Virginia University Institute of Technology,52700.0
+Charleston Southern University,40600.0
+Cox College,42700.0
+The University of Tennessee-Martin,40100.0
+Southwestern Adventist University,47100.0
+Massachusetts College of Art and Design,40700.0
+University of Health Sciences and Pharmacy in St. Louis,110600.0
+Rowan University,55400.0
+University of Oregon,51300.0
+Westminster College,47200.0
+University of Phoenix-Hawaii,54900.0
+American Academy of Art College,35600.0
+Davis College,33400.0
+Spalding University,48300.0
+High Point University,42900.0
+Dillard University,37900.0
+Lewis-Clark State College,38200.0
+Logan University,55400.0
+Trine University,49600.0
+Colorado School of Mines,95600.0
+Minneapolis College of Art and Design,43200.0
+Salem College,37400.0
+Bluefield State College,31900.0
+Uta Mesivta of Kiryas Joel,32600.0
+University of Oklahoma-Norman Campus,61900.0
+Heritage University,36800.0
+Messiah University,50500.0
+University of North Carolina at Chapel Hill,68800.0
+Manhattan Christian College,38800.0
+Miami University-Middletown,55400.0
+University of Evansville,48800.0
+Johnson & Wales University-Charlotte,42200.0
+California State University-Chico,55400.0
+Mercy College of Ohio,49500.0
+Western Carolina University,41300.0
+Paine College,29700.0
+Saint Joseph's College of Maine,47000.0
+SUM Bible College and Theological Seminary,
+University of Arkansas,52700.0
+Presentation College,38100.0
+Grinnell College,61000.0
+Southern University at New Orleans,32100.0
+Samford University,59800.0
+West Coast University-Los Angeles,67700.0
+SUNY at Purchase College,41300.0
+Beulah Heights University,36900.0
+Dartmouth College,110200.0
+St Olaf College,57300.0
+Oklahoma State University-Main Campus,55300.0
+Simmons University,58400.0
+Eastern New Mexico University-Main Campus,34800.0
+William & Mary,74500.0
+Bucknell University,82400.0
+Bellin College,62100.0
+Saint Louis Christian College,32300.0
+Houston Baptist University,52300.0
+Fontbonne University,46300.0
+Saint Michael's College,57800.0
+Oklahoma Christian University,43300.0
+Naropa University,27800.0
+Augusta University,70600.0
+New Mexico State University-Main Campus,40300.0
+Concord University,35700.0
+Morningside University,47900.0
+Inter American University of Puerto Rico-Aguadilla,23500.0
+University of Saint Joseph,52900.0
+Marietta College,57700.0
+Five Towns College,40100.0
+Alvernia University,47300.0
+National American University-Rapid City,39500.0
+University of North Carolina Wilmington,46600.0
+University of the Southwest,41000.0
+Tarleton State University,47700.0
+Bridgewater College,46600.0
+Mary Baldwin University,39500.0
+Barnard College,69700.0
+SUNY College of Agriculture and Technology at Cobleskill,39500.0
+University of Illinois Urbana-Champaign,70900.0
+Strayer University-Pennsylvania,53500.0
+Trinity Bible College and Graduate School,31700.0
+Oral Roberts University,43100.0
+University of Virginia-Main Campus,79400.0
+CUNY New York City College of Technology,44700.0
+Columbia Central University-Caguas,25000.0
+Buena Vista University,42600.0
+Christian Brothers University,50000.0
+Holy Cross College,45300.0
+Saint Cloud State University,48600.0
+Brigham Young University,71500.0
+Georgian Court University,43600.0
+Salve Regina University,57700.0
+Bethel University,42800.0
+Capital University,48400.0
+East Tennessee State University,40600.0
+Glenville State University,38400.0
+Asbury University,40700.0
+Benedictine University,56400.0
+Curry College,51100.0
+Wartburg College,50600.0
+Northern State University,37300.0
+Pontifical Catholic University of Puerto Rico-Ponce,21400.0
+College of Saint Mary,43000.0
+Northwest Missouri State University,43700.0
+Grand Canyon University,58500.0
+Indiana University-Southeast,41800.0
+California Aeronautical University,33400.0
+Hood College,49400.0
+Union College,36400.0
+Trinity College of Nursing & Health Sciences,50600.0
+Quinnipiac University,67700.0
+United Talmudical Seminary,26100.0
+University of Arkansas at Pine Bluff,30600.0
+Chamberlain University-Arizona,60400.0
+DeVry University-Nevada,50300.0
+Southern Connecticut State University,48100.0
+CEM College-Humacao,22300.0
+Lafayette College,80500.0
+Kansas State University,51900.0
+Culver-Stockton College,40100.0
+Alverno College,40900.0
+University of South Carolina Aiken,40800.0
+Mississippi College,44900.0
+Quincy University,46000.0
+St. Joseph's University-New York,53900.0
+Oakland City University,37200.0
+Bard College,43700.0
+Bethel College-North Newton,45600.0
+Ohio Christian University,33000.0
+Gallaudet University,34300.0
+West Coast University-Miami,67700.0
+Alma College,46500.0
+Indiana University-Bloomington,57800.0
+Tusculum University,42500.0
+Texas A & M University-Commerce,41900.0
+CUNY City College,50900.0
+Whitworth University,48000.0
+Washburn University,43500.0
+University of South Carolina Beaufort,40400.0
+Georgetown College,50500.0
+Virginia Commonwealth University,49700.0
+Grambling State University,32800.0
+University of Indianapolis,46100.0
+American University of Puerto Rico,24200.0
+San Francisco Art Institute,38600.0
+Hiram College,46900.0
+Roger Williams University,56000.0
+Trinity University,68000.0
+College of the Holy Cross,88600.0
+Cornell University,101200.0
+Evangel University,40900.0
+Radford University,48000.0
+SUNY Buffalo State,42200.0
+Gannon University,55100.0
+Xavier University of Louisiana,64500.0
+Centenary College of Louisiana,52500.0
+Rogers State University,39300.0
+Arlington Baptist University,38000.0
+Lancaster Bible College,37900.0
+Berkeley College-New York,44600.0
+York College,39000.0
+University of Charleston,46800.0
+Notre Dame de Namur University,63900.0
+University of Richmond,78900.0
+Dickinson College,64100.0
+Winthrop University,39800.0
+Moore College of Art and Design,36600.0
+Benedict College,27300.0
+Wentworth Institute of Technology,67300.0
+University of Puget Sound,59100.0
+University of St Thomas,62900.0
+Denison University,57600.0
+Hendrix College,44500.0
+Augustana College,56400.0
+Doane University,48200.0
+Wiley College,30700.0
+Albright College,51400.0
+Gordon College,47700.0
+Lubbock Christian University,50500.0
+Louisiana State University Health Sciences Center-New Orleans,99800.0
+Bacone College,37000.0
+Nyack College,46700.0
+Cleveland State University,46400.0
+University of Minnesota-Duluth,56300.0
+Cardinal Stritch University,55400.0
+Harris-Stowe State University,30900.0
+Columbus College of Art and Design,39800.0
+Columbia College Chicago,39200.0
+Bellevue University,60500.0
+Briar Cliff University,44400.0
+Thomas Edison State University,57300.0
+University of Toledo,52800.0
+New Jersey Institute of Technology,70300.0
+Iona College,60900.0
+CUNY Hunter College,51800.0
+Post University,46500.0
+Georgia Institute of Technology-Main Campus,85900.0
+California State University-Stanislaus,48500.0
+Rhode Island School of Design,56400.0
+Allen College,52800.0
+William Peace University,36900.0
+Shaw University,30500.0
+Lincoln University,36200.0
+Southern Virginia University,39100.0
+Southern New Hampshire University,50200.0
+South University-Virginia Beach,40200.0
+University of Massachusetts Global,
+Excelsior College,
+Friends University,46900.0
+Pfeiffer University,45000.0
+Dominican College of Blauvelt,52500.0
+Howard Payne University,40500.0
+Saint Xavier University,50600.0
+Hardin-Simmons University,48300.0
+University of California-Merced,
+AdventHealth University,58200.0
+The Master's University and Seminary,52100.0
+Johns Hopkins University,89300.0
+South University-Savannah,40200.0
+University of Mary,53000.0
+Connecticut College,62900.0
+Western Governors University,48100.0
+Alcorn State University,35000.0
+University of Lynchburg,48800.0
+Full Sail University,46000.0
+Florida Agricultural and Mechanical University,44700.0
+Northwestern University,93400.0
+George Fox University,51000.0
+Inter American University of Puerto Rico-Fajardo,23500.0
+Michigan Technological University,66800.0
+Baptist University of the Americas,
+University of Phoenix-Nevada,54900.0
+University of Jamestown,49600.0
+Francis Marion University,36900.0
+Rasmussen University-Florida,34300.0
+Stephens College,41000.0
+John Carroll University,61100.0
+William Woods University,40300.0
+Kettering College,60200.0
+Western Michigan University,50500.0
+University of Science and Arts of Oklahoma,36400.0
+Inter American University of Puerto Rico-Ponce,23500.0
+William Carey University,40500.0
+Franciscan University of Steubenville,42700.0
+North Dakota State University-Main Campus,55500.0
+Brigham Young University-Idaho,49400.0
+Pratt Institute-Main,48900.0
+Huntington University,39000.0
+East-West University,29000.0
+Mount Vernon Nazarene University,50000.0
+Central State University,28600.0
+Indiana University-Purdue University-Indianapolis,50700.0
+Waldorf University,42400.0
+Furman University,59700.0
+Westminster College,58100.0
+Clarke University,44800.0
+University of the District of Columbia,39400.0
+Trinity International University-Illinois,45400.0
+Clarkson University,74200.0
+Eastern Oregon University,44100.0
+Bloomsburg University of Pennsylvania,48100.0
+Hofstra University,59900.0
+The University of Texas at Austin,73900.0
+East Central University,42200.0
+Centenary University,49700.0
+Eastern Connecticut State University,49000.0
+Inter American University of Puerto Rico-Barranquitas,23500.0
+Manhattan School of Music,40700.0
+University of Mobile,38700.0
+Castleton University,40800.0
+Art Academy of Cincinnati,30100.0
+University of Saint Francis-Fort Wayne,43600.0
+Tuskegee University,42200.0
+Yeshiva Gedolah Imrei Yosef D'spinka,31800.0
+Smith College,51100.0
+Southern Illinois University-Carbondale,49500.0
+Elmira College,48500.0
+University of Louisiana at Lafayette,46400.0
+Rockford University,47800.0
+Aurora University,46200.0
+The University of Findlay,49100.0
+Millersville University of Pennsylvania,46000.0
+United States Merchant Marine Academy,98600.0
+Felician University,52800.0
+Northwest Nazarene University,46300.0
+Peirce College,50300.0
+University of New Orleans,43500.0
+Saint Francis University,57400.0
+Colorado Mesa University,42300.0
+University of California-Los Angeles,73200.0
+Murray State University,42300.0
+Lincoln Memorial University,41600.0
+AI Miami International University of Art and Design,34800.0
+North Central College,52300.0
+Rockhurst University,57300.0
+Saint Anthony College of Nursing,60100.0
+University of Missouri-St Louis,49200.0
+Seton Hill University,44500.0
+Houghton College,42400.0
+Chamberlain University-Illinois,60400.0
+Louisiana State University-Alexandria,36300.0
+MidAmerica Nazarene University,49600.0
+Greensboro College,41000.0
+California Institute of Integral Studies,
+Missouri Valley College,38100.0
+Boston College,92500.0
+Wittenberg University,49000.0
+University of Kentucky,54000.0
+Sul Ross State University,41400.0
+Nicholls State University,43800.0
+San Diego Christian College,42500.0
+Molloy College,64100.0
+Kent State University at Kent,42400.0
+Assumption University,61300.0
+University of Sioux Falls,44800.0
+Gettysburg College,66300.0
+The University of Texas MD Anderson Cancer Center,90100.0
+Fitchburg State University,47400.0
+Augustana University,49500.0
+Sterling College,
+Marist College,62600.0
+Luther Rice College & Seminary,45400.0
+West Liberty University,39500.0
+Middle Georgia State University,35000.0
+University of Louisiana at Monroe,46300.0
+The University of Montana,43300.0
+American InterContinental University-Houston,45200.0
+Texas College,28000.0
+Stonehill College,66800.0
+University of California-Santa Barbara,62400.0
+Brescia University,48000.0
+Kutztown University of Pennsylvania,43900.0
+Averett University,49000.0
+Louisiana Tech University,49200.0
+Point Loma Nazarene University,54400.0
+Truett McConnell University,37100.0
+Illinois College,49100.0
+Rivier University,49400.0
+Yale University,124400.0
+Strayer University-Maryland,53500.0
+Reinhardt University,40500.0
+University of Nevada-Reno,56300.0
+Arkansas State University,36600.0
+Montserrat College of Art,28800.0
+Universidad Pentecostal Mizpa,22800.0
+The University of Texas at El Paso,43300.0
+Texas Tech University,61600.0
+The University of Texas Permian Basin,52300.0
+Northwestern College,40200.0
+Willamette University,57900.0
+CUNY York College,45300.0
+Cleveland Institute of Art,41600.0
+Governors State University,44000.0
+Augsburg University,53200.0
+Shawnee State University,37500.0
+Miles College,29500.0
+Adelphi University,63000.0
+The University of Texas Health Science Center at San Antonio,111500.0
+Maine College of Art & Design,32800.0
+Arcadia University,48000.0
+Allegheny College,56800.0
+Carleton College,67900.0
+Northwest University,46300.0
+Saint Joseph's University,65900.0
+Northland College,35500.0
+California Institute of Technology,106300.0
+California State University-Channel Islands,51900.0
+Seattle Pacific University,54200.0
+Wayne State College,40300.0
+Cabrini University,49600.0
+Rabbinical College of Ohr Shimon Yisroel,20000.0
+Harvey Mudd College,104200.0
+Biola University,50700.0
+Upstate Medical University,117300.0
+Fort Hays State University,42700.0
+College of the Atlantic,27800.0
+Universidad Central de Bayamon,21600.0
+University of Washington-Seattle Campus,69600.0
+Tennessee Wesleyan University,43700.0
+Central Methodist University-College of Graduate and Extended Studies,39500.0
+University of Nebraska at Kearney,45800.0
+Walla Walla University,50900.0
+Kansas Wesleyan University,43300.0
+Dalton State College,34700.0
+University of Maine at Augusta,30600.0
+Dordt University,45300.0
+University of North Carolina School of the Arts,46700.0
+Randolph College,41500.0
+La Sierra University,54600.0
+Bowdoin College,83300.0
+Kentucky Wesleyan College,41700.0
+University of Wisconsin-Eau Claire,50300.0
+Santa Clara University,85300.0
+Rutgers University-Newark,68100.0
+The University of Tampa,55100.0
+University of Maine at Presque Isle,35300.0
+University of Minnesota-Morris,44400.0
+University of South Carolina-Upstate,41300.0
+Keuka College,46700.0
+Dakota Wesleyan University,40900.0
+Piedmont University,43400.0
+Ringling College of Art and Design,43100.0
+Skidmore College,57000.0
+Southern Arkansas University Main Campus,39000.0
+Washington & Jefferson College,60100.0
+Trinity College,74300.0
+University of Mary Hardin-Baylor,48700.0
+Wingate University,55700.0
+Bridgewater State University,47900.0
+Ouachita Baptist University,46000.0
+Concordia University Texas,51300.0
+Idaho State University,43900.0
+University of North Texas,49300.0
+Azusa Pacific University,55900.0
+University of the Cumberlands,38200.0
+Saint Mary's University of Minnesota,50400.0
+Metropolitan College of New York,40100.0
+Cooper Union for the Advancement of Science and Art,68600.0
+Oak Point University,72900.0
+University of Wisconsin-River Falls,44900.0
+Southern Illinois University-Edwardsville,50800.0
+Fordham University,67000.0
+Olivet College,42200.0
+University of California-Irvine,65800.0
+Park University,50800.0
+Louisiana State University-Shreveport,41000.0
+Chamberlain University-Virginia,60400.0
+Eagle Gate College-Layton,31600.0
+The University of Texas Health Science Center at Houston,138400.0
+William Penn University,46400.0
