@@ -45,15 +45,18 @@ with tab1:
 with tab2:
     # feature importance plot
     st.header('Feature Importance')
+    st.text("This plot helps us see the average contribution of each feature to expected income")
+    # if get current figure does not work, try this:
+    fig, ax = plt.subplots(nrows=1,ncols=1)
     shap.plots.bar(shap_values,max_display = 15,show=True)
     # shap.summary_plot(shap_values,plot_type = 'bar',show=False)
     # as stated in documentation, setting show to false allows for further customization
     # https://shap.readthedocs.io/en/latest/generated/shap.plots.bar.html
+    #st.pyplot(plt.gcf())
+    plt.xlabel("Average absolute impact on model output\n(mean(|SHAP value|))")
+    # get current figure and attempt to set xlabel
+    st.pyplot(fig)
     
-    # want to make these edits, but need to wait for now
-    # fig = plt.gca()
-    # fig.set_xlabel("Average absolute impact on model output\n(mean(|SHAP value|))")
-    # st.pyplot(fig) # instead of plt.show()
     # FIXME: change model output to 6 or 10 year income
 
 with tab3:
