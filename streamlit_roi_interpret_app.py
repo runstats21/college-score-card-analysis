@@ -80,15 +80,13 @@ tab1, tab2, tab3 = st.tabs(["School Specific", "Feature Contributions", "Global 
 with tab1:
     st.header("Local Explainations by Selected School")
     school = st.selectbox("Select a school", options = X_filled.index,
-                        label_visibility="visible")
+                          label_visibility="visible")
     idx_of_interest = np.argwhere(X_filled.index == f'{school}')[0][0]
     school_fig, ax1 = plt.subplots(1,1)
     shap.plots.waterfall(shap_values[idx_of_interest],show=False)
     plt.title(f'{school} Expected Income 6-years Post Graduation: Explained')
     # plt.show()
     st.pyplot(school_fig)
-
-
 
 with tab2:
     # TODO: change y-axis label
@@ -101,7 +99,6 @@ with tab2:
 
     # if time: add interaction plot
     
-
 with tab3:
     # feature importance plot
     st.subheader('Feature Importance')
@@ -119,7 +116,7 @@ with tab3:
     st.pyplot(fig) # may want to add clear_figure = True
     # FIXME: change model output to 6 or 10 year income
 
-
+st.write("""""")
 st.write("""
          Copyright &copy; 2023 Tyler Ward. All rights reserved.
          """)
