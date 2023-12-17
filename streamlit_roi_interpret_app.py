@@ -9,6 +9,8 @@ import matplotlib.pyplot as plt
 # APP
 st.title("Interpreting College ROI")
 
+st.markdown("This app is intended to help explain both expected income and how this is estimated through machine learning.\nExplore the tabs below to find both the **expected post-entry income** of your favorite school AND *how* different variables contributed to that expected income score.")
+
 # TODO: clean 10 year data, and edit data import accordingly
 # outcome = st.radio(
 #     "Select years post entry:",
@@ -89,7 +91,7 @@ with tab1:
 
 
 with tab2:
-    st.header("Feature Contribution Plots")
+    st.header("Feature Contribution Summary")
     disp_feat = st.selectbox('Select a feature to display', options=X_filled.columns)
     st.subheader(f'Scatterplot of {disp_feat} Contribution\n(SHAP scatterplot)')
     shap.plots.scatter(shap_values[:, f'{disp_feat}'],show=True,
@@ -103,7 +105,7 @@ with tab3:
     # feature importance plot
     st.header('Feature Importance')
     # outcome = st.selectbox("Choose outcome of interest", options = [])
-    st.text("This plot helps us see the average contribution\nof each feature to expected income")
+    st.markdown("This plot helps us see the average contribution of each feature to expected income")
     # if get current figure does not work, try this:
     fig, ax = plt.subplots(nrows=1,ncols=1)
     #shap.plots.bar(shap_values,max_display = 15)
