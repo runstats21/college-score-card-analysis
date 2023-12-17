@@ -70,9 +70,10 @@ shap_values = get_shap_values(_fitted_model=rf,feature_set=X_filled)
 
 tab1, tab2, tab3 = st.tabs(["School Specific", "Feature Contributions", "Global Summary"])
 
-
-plot_width = st.sidebar.slider("plot width", 1, 25, 3)
-plot_height = st.sidebar.slider("plot height", 1, 25, 1)
+# trying to edit plot dims in side bar didn't work,
+# but is good template if desiring to use a side bar
+# plot_width = st.sidebar.slider("plot width", 1, 25, 3)
+# plot_height = st.sidebar.slider("plot height", 1, 25, 1)
 
 with tab1:
     st.header("Local Explainations by Selected School")
