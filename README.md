@@ -8,18 +8,17 @@ This repository contains the following files related to data collected from the 
 
 Full details on the data collection process can be found in another one of my blog posts: [College Scorecard: Accessing Higher Education Statistics with US Department of Education API](https://runstats21.github.io/stat-386-projects/2022/10/17/webscraping-post.html)
 
-## SHAP: Interpretable ML/Explainable AI
-`simpleModel+shap.ipynb` shows some intriguing visualizations not only in regards to factors related to expected income 6 years post college entry, but also into the ability of using the [shap](https://shap.readthedocs.io/en/latest/index.html) python package to "open the black box" of ML models.
-
 ## Statistical/ML Modeling
 The following files contain work used to fit both basic and advanced statistical models to effectively estimate expected income of college students 6 years post-entry:
-
 - `simpleSupervisedOLS+Lasso.ipynb`
 - `advancedSupervisedLearn.ipynb`
 
+## SHAP: Interpretable ML/Explainable AI
+`simpleModel+shap.ipynb` shows some intriguing visualizations not only in regards to factors related to expected income 6 years post college entry, but also into the ability of using the [shap](https://shap.readthedocs.io/en/latest/index.html) python package to "open the black box" of ML models.
+
+### Interactive Dashboard
+In order to allow easy accessibility to see both explanations of expected incomes for thousands of US universities and understand average contributions of different variables to that income, I built a dashboard using the `streamlit` package. This dashboard can be found here: https://collegeroi.streamlit.app/
+
 ## Next steps:
-- Advanced model with random forest and CATBOOST or XGBOOST
+- Advanced model with random forest and XGBOOST
 - for each of these models, assess both 6 year and 10 year income post college entry
-- Convert shap output into dashboard
-
-
