@@ -14,10 +14,10 @@ The following files contain work used to fit both basic and advanced statistical
 - `advancedSupervisedLearn.ipynb`
 
 ## SHAP: Interpretable ML/Explainable AI
-`simpleModel+shap.ipynb` shows some intriguing visualizations not only in regards to factors related to expected income 6 years post college entry, but also into the ability of using the [shap](https://shap.readthedocs.io/en/latest/index.html) python package to "open the black box" of ML models.
+`simpleModel+shap.ipynb` shows some intriguing visualizations not only in regards to factors related to expected income 6 years post college entry, but also into the ability of using the [shap](https://shap.readthedocs.io/en/latest/index.html) package to "open the black box" of ML models.
 
 ### Interactive Dashboard
-In order to allow easy accessibility to see both explanations of expected incomes for thousands of US universities and understand average contributions of different variables to that income, I built a dashboard using the `streamlit` package. This dashboard can be found here: https://collegeroi.streamlit.app/
+In order to allow easy accessibility to see both explanations of expected incomes for thousands of US universities and understand average contributions of different variables to that income, I built a dashboard using the [`streamlit`](https://streamlit.io/) package. This dashboard can be found here: https://collegeroi.streamlit.app/
 
 ## Next steps:
 - Advanced model with random forest and XGBOOST
