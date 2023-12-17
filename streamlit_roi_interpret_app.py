@@ -10,7 +10,7 @@ import matplotlib.pyplot as plt
 st.title("Interpreting College ROI")
 
 st.markdown("This app is intended to help explain both expected income and how this is estimated through machine learning.\nExplore the tabs below to find both the **expected post-entry income** of your favorite school AND *how* different variables contributed to that expected income score.")
-
+st.markdown('Much of this work is done using the [`shap`](https://shap.readthedocs.io/en/latest/index.html) python package, which calculates the average contribution of model inputs to help open the "black-box" of Machine Learning models.')
 # TODO: clean 10 year data, and edit data import accordingly
 # outcome = st.radio(
 #     "Select years post entry:",
@@ -91,9 +91,10 @@ with tab1:
 
 
 with tab2:
+    # TODO: change y-axis label
     st.header("Feature Contribution Summary")
     disp_feat = st.selectbox('Select a feature to display', options=X_filled.columns)
-    st.subheader(f'Scatterplot of {disp_feat} Contribution\n(SHAP scatterplot)')
+    st.subheader(f'Scatterplot of {disp_feat} Contribution')
     shap.plots.scatter(shap_values[:, f'{disp_feat}'],show=True,
                        ylabel = "Expected Income contribution")
     st.pyplot(plt.gcf())
@@ -103,7 +104,7 @@ with tab2:
 
 with tab3:
     # feature importance plot
-    st.header('Feature Importance')
+    st.subheader('Feature Importance')
     # outcome = st.selectbox("Choose outcome of interest", options = [])
     st.markdown("This plot helps us see the average contribution of each feature to expected income")
     # if get current figure does not work, try this:
@@ -117,3 +118,8 @@ with tab3:
     plt.xlabel("Average absolute impact on model output\n(mean(|SHAP value|))")
     st.pyplot(fig) # may want to add clear_figure = True
     # FIXME: change model output to 6 or 10 year income
+
+
+st.write("""
+         Copyright &copy; 2023 Tyler Ward. All rights reserved.
+         """)
