@@ -83,7 +83,7 @@ tab1, tab2, tab3 = st.tabs(["School Specific", "Feature Contributions", "Global 
 # plot_height = st.sidebar.slider("plot height", 1, 25, 1)
 
 with tab1:
-    st.header("Local Explanations by Selected School")
+    st.header("School Specific Expected Income: Explained")
     school = st.selectbox("Select a school (sorted alphabetically)", options = X_filled.index.sort_values(),
                           label_visibility="visible")
     idx_of_interest = np.argwhere(X_filled.index == f'{school}')[0][0]
