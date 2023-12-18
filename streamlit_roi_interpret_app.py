@@ -9,8 +9,14 @@ import matplotlib.pyplot as plt
 # APP
 st.title("Interpreting College ROI")
 
-st.markdown("This app is intended to help explain both expected income and how this is estimated through machine learning.\nExplore the tabs below to find both the **expected post-entry income** of your favorite school AND *how* different variables contributed to that expected income score.")
-st.markdown('Much of this work is done using the [`shap`](https://shap.readthedocs.io/en/latest/index.html) python package, which calculates the average contribution of model inputs to help open the "black-box" of Machine Learning models.')
+st.markdown("""There are many factors leading to choice of college to attend, one of the largest being the level of employeement opportunities available after attend a given college, which can be termed a "return on investment", or ROI.
+            This page is intended to help explain both expected income and how this is estimated through a machine learning model.
+            """)
+st.markdown(""" 
+            Explore the tabs below to find both the **expected post-entry income** of your favorite school and **how different variables contributed** to that expected income score.
+            Information from 4-year degree awarding US universities, recorded in the Department of Education's [College Scorecard](https://collegescorecard.ed.gov/) are included in this analysis.
+            """)
+st.markdown('Much of this work is done using the [`shap`](https://shap.readthedocs.io/en/latest/index.html) python package, which calculates the average contribution of model inputs to expected income measures.')
 # TODO: clean 10 year data, and edit data import accordingly
 # outcome = st.radio(
 #     "Select years post entry:",
@@ -37,7 +43,6 @@ def data_import():
     return X_filled,Xtrain_filled,ytrain
 
 X_filled,Xtrain_filled,ytrain = data_import()
-
 
 # train chosen model(s)
 @st.experimental_singleton
@@ -78,20 +83,22 @@ tab1, tab2, tab3 = st.tabs(["School Specific", "Feature Contributions", "Global 
 # plot_height = st.sidebar.slider("plot height", 1, 25, 1)
 
 with tab1:
-    st.header("Local Explainations by Selected School")
-    school = st.selectbox("Select a school", options = X_filled.index,
+    st.header("Local Explanations by Selected School")
+    school = st.selectbox("Select a school (sorted alphabetically)", options = X_filled.index.sort_values(),
                           label_visibility="visible")
     idx_of_interest = np.argwhere(X_filled.index == f'{school}')[0][0]
     school_fig, ax1 = plt.subplots(1,1)
-    shap.plots.waterfall(shap_values[idx_of_interest],show=False)
+    shap.plots.waterfall(shap_values[idx_of_interest],show=False,
+                         max_display = 15,)
     plt.title(f'{school} Expected Income 6-years Post Graduation: Explained')
+    # plt.xlim([30000,100000])
     # plt.show()
     st.pyplot(school_fig)
 
 with tab2:
     # TODO: change y-axis label
     st.header("Feature Contribution Summary")
-    disp_feat = st.selectbox('Select a feature to display', options=X_filled.columns)
+    disp_feat = st.selectbox('Select a feature to display', options=X_filled.columns.sort_values())
     st.subheader(f'Scatterplot of {disp_feat} Contribution')
     shap.plots.scatter(shap_values[:, f'{disp_feat}'],show=True,
                        ylabel = "Expected Income contribution")
@@ -112,9 +119,11 @@ with tab3:
     # https://shap.readthedocs.io/en/latest/generated/shap.plots.bar.html
     #st.pyplot(plt.gcf())
     # get current figure and attempt to set xlabel
+    plt.title("Relative Contributions to Expected Income Outputs")
     plt.xlabel("Average absolute impact on model output\n(mean(|SHAP value|))")
     st.pyplot(fig) # may want to add clear_figure = True
     # FIXME: change model output to 6 or 10 year income
+
 
 st.write("""""")
 st.write("""
