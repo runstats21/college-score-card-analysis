@@ -9,7 +9,7 @@ This repository contains the following files related to data collected from the 
 Full details on the data collection process can be found in another one of my blog posts: [College Scorecard: Accessing Higher Education Statistics with US Department of Education API](https://runstats21.github.io/stat-386-projects/2022/10/17/webscraping-post.html)
 
 ## Statistical/ML Modeling
-The following files contain work used to fit both basic and advanced statistical models to effectively estimate expected income of college students 6 years post-entry:
+The following files contain work used to fit both basic and advanced statistical models to effectively estimate expected income of college students (6 years post-entry):
 - `simpleSupervisedOLS+Lasso.ipynb`
 - `advancedSupervisedLearn.ipynb`
 
@@ -20,5 +20,5 @@ The following files contain work used to fit both basic and advanced statistical
 In order to allow easy accessibility to see both explanations of expected incomes for thousands of US universities and understand average contributions of different variables to that income, I built a dashboard using the [streamlit](https://streamlit.io/) package. This dashboard can be found here: https://collegeroi.streamlit.app/
 
 ## Next steps:
-- Advanced model with random forest and XGBOOST
-- for each of these models, assess both 6 year and 10 year income post college entry
+- cluster analysis and possible implementation of clusters as new features
+- including interactions and cohort groupings on shap plots in streamlit dashboard
