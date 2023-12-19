@@ -17,43 +17,57 @@ st.markdown("""
             Information from 4-year degree awarding US universities, recorded in the Department of Education's [College Scorecard](https://collegescorecard.ed.gov/) are included in this analysis.
             """)
 st.markdown('Much of this work is done using the [`shap`](https://shap.readthedocs.io/en/latest/index.html) python package, which calculates the average contribution of model inputs to expected income measures.')
+
 # TODO: clean 10 year data, and edit data import accordingly
-# outcome = st.radio(
-#     "Select years post entry:",
-#     [6, 10]
-# )
+outcome = st.sidebar.radio(
+    "Number of years post college entry",
+    [6, 10]
+)
 
 # SOURCE CODE
 # cache data
 @st.experimental_memo
 def data_import():
     # import data
-    X_filled = pd.read_csv("X_filled.csv",index_col="School Name")
-    Xtrain_filled = pd.read_csv("Xtrain_filled.csv", index_col="School Name")
-    Xtest_filled = pd.read_csv("Xtest_filled.csv", index_col="School Name")
-    ytrain = pd.read_csv("ytrain.csv", index_col="School Name").squeeze()
-    ytest0 = pd.read_csv("ytest.csv", index_col="School Name").squeeze()
-    ytrain10 = pd.read_csv("ytrain10.csv", index_col="School Name").squeeze()
-    ytest010 = pd.read_csv("ytest10.csv", index_col="School Name").squeeze()
+    # read in preprocessed data
+    X_filled = pd.read_csv("./saved_data/X_filled.csv",index_col="School Name")
+    Xtrain_filled = pd.read_csv("./saved_data/Xtrain_filled.csv",index_col="School Name")
+    ytrain = pd.read_csv("./saved_data/ytrain.csv",index_col="School Name").squeeze()
+    Xtest_filled = pd.read_csv("./saved_data/Xtest_filled.csv",index_col="School Name")
+    ytest0 = pd.read_csv("./saved_data/ytest.csv",index_col="School Name").squeeze()
+    # 10 year post entry data
+    X_filled10 = pd.read_csv("./saved_data/X_filled10.csv",index_col="School Name")
+    Xtrain_filled10 = pd.read_csv("./saved_data/Xtrain_filled10.csv",index_col="School Name")
+    ytrain10 = pd.read_csv("./saved_data/ytrain10.csv",index_col="School Name").squeeze()
+    Xtest_filled10 = pd.read_csv("./saved_data/Xtest_filled10.csv",index_col="School Name")
+    ytest10 = pd.read_csv("./saved_data/ytest10.csv",index_col="School Name").squeeze()
+
+    # X_filled = pd.read_csv("X_filled.csv",index_col="School Name")
+    # Xtrain_filled = pd.read_csv("Xtrain_filled.csv", index_col="School Name")
+    # Xtest_filled = pd.read_csv("Xtest_filled.csv", index_col="School Name")
+    # ytrain = pd.read_csv("ytrain.csv", index_col="School Name").squeeze()
+    # ytest0 = pd.read_csv("ytest.csv", index_col="School Name").squeeze()
+    # ytrain10 = pd.read_csv("ytrain10.csv", index_col="School Name").squeeze()
+    # ytest010 = pd.read_csv("ytest10.csv", index_col="School Name").squeeze()
     # eventually, will call DataCollectClean script, which will produced these csvs,
     # and then will read them in as done here
     
     #ytrain_chosen = ytrain if outcome == 6 else ytrain10
 
-    return X_filled,Xtrain_filled,ytrain
+    return X_filled,Xtrain_filled,ytrain,X_filled10,Xtrain_filled10,ytrain10
 
-X_filled,Xtrain_filled,ytrain = data_import()
+X_filled,Xtrain_filled,ytrain,X_filled10,Xtrain_filled10,ytrain10 = data_import()
 
 # train chosen model(s)
 @st.experimental_singleton
-def model_fit(y):
-    rf = RandomForestRegressor(n_estimators=150, criterion='squared_error').fit(Xtrain_filled,y)
+def model_fit(X,y):
+    rf = RandomForestRegressor(n_estimators=200, criterion='squared_error', max_features="sqrt").fit(X,y)
     # rf10 = RandomForestRegressor(n_estimators=150, criterion='squared_error').fit(Xtrain_filled,ytrain10)
     # NOTE: 10 year measures still have a few missing values. FIXME
     return rf
 
-rf = model_fit(ytrain)
-
+rf = model_fit(Xtrain_filled,ytrain)
+rf10 = model_fit(Xtrain_filled10,ytrain10)
 # if time: could also fit quantile regressor! and get ci's of expected income for each school
 
 # get shap values
@@ -67,6 +81,8 @@ def get_shap_values(_fitted_model, feature_set):
     # shap_values = explainer(X_filled) # get shap values for all colleges
     return shap_values
 
+chosen_model = rf if outcome == 6 else rf10
+# TODO: add ability to switch models based on chosen response variable
 shap_values = get_shap_values(_fitted_model=rf,feature_set=X_filled)
 
 # APP continued
@@ -90,7 +106,7 @@ with tab1:
     school_fig, ax1 = plt.subplots(1,1)
     shap.plots.waterfall(shap_values[idx_of_interest],show=False,
                          max_display = 15,)
-    plt.title(f'{school} Expected Income 6-years Post Graduation: Explained')
+    plt.title(f'{school} Expected Income {outcome}-years Post Graduation: Explained')
     # plt.xlim([30000,100000])
     # plt.show()
     st.pyplot(school_fig)
@@ -123,6 +139,10 @@ with tab3:
     plt.xlabel("Average absolute impact on model output\n(mean(|SHAP value|))")
     st.pyplot(fig) # may want to add clear_figure = True
     # FIXME: change model output to 6 or 10 year income
+
+    # COULD ADD: 
+    # st.header("Sorted Expected Income Outputs")
+    # enter here: table of sorted predictions
 
 
 st.write("""""")
