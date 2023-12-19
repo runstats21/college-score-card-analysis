@@ -20,7 +20,7 @@ st.markdown('Much of this work is done using the [`shap`](https://shap.readthedo
 
 # TODO: clean 10 year data, and edit data import accordingly
 outcome = st.sidebar.radio(
-    "Number of years post college entry",
+    "Number of years post college entry:",
     [6, 10]
 )
 
@@ -81,10 +81,9 @@ def get_shap_values(_fitted_model, feature_set):
     # shap_values = explainer(X_filled) # get shap values for all colleges
     return shap_values
 
-chosen_model = rf if outcome == 6 else rf10
 # TODO: add ability to switch models based on chosen response variable
-shap_values = get_shap_values(_fitted_model=rf,feature_set=X_filled)
-
+shap_values = get_shap_values(_fitted_model=rf,feature_set=X_filled) if outcome == 6 else get_shap_values(_fitted_model=rf10,feature_set=X_filled10)
+school_inds = X_filled.index if outcome == 6 else X_filled10.index
 # APP continued
 
 # if desire 2 columns
@@ -100,9 +99,9 @@ tab1, tab2, tab3 = st.tabs(["School Specific", "Feature Contributions", "Global 
 
 with tab1:
     st.header("School Specific Expected Income: Explained")
-    school = st.selectbox("Select a school (sorted alphabetically)", options = X_filled.index.sort_values(),
+    school = st.selectbox("Select a school (sorted alphabetically)", options = school_inds.sort_values(),
                           label_visibility="visible")
-    idx_of_interest = np.argwhere(X_filled.index == f'{school}')[0][0]
+    idx_of_interest = np.argwhere(school_inds == f'{school}')[0][0]
     school_fig, ax1 = plt.subplots(1,1)
     shap.plots.waterfall(shap_values[idx_of_interest],show=False,
                          max_display = 15,)
@@ -138,7 +137,6 @@ with tab3:
     plt.title("Relative Contributions to Expected Income Outputs")
     plt.xlabel("Average absolute impact on model output\n(mean(|SHAP value|))")
     st.pyplot(fig) # may want to add clear_figure = True
-    # FIXME: change model output to 6 or 10 year income
 
     # COULD ADD: 
     # st.header("Sorted Expected Income Outputs")
