@@ -18,7 +18,3 @@ The following files contain work used to fit both basic and advanced statistical
 
 ### Interactive Dashboard
 In order to allow easy accessibility to see both explanations of expected incomes for thousands of US universities and understand average contributions of different variables to that income, I built a dashboard using the [streamlit](https://streamlit.io/) package. This dashboard can be found here: https://collegeroi.streamlit.app/
-
-## Next steps:
-- cluster analysis and possible implementation of clusters as new features
-- including interactions and cohort groupings on shap plots in streamlit dashboard
