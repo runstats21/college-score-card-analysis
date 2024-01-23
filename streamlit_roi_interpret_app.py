@@ -5,6 +5,7 @@ from sklearn.ensemble import RandomForestRegressor
 import numpy as np 
 import pandas as pd
 import matplotlib.pyplot as plt
+import pickle
 
 # APP
 st.title("Interpreting College ROI")
@@ -73,16 +74,19 @@ rf10 = model_fit(Xtrain_filled10,ytrain10)
 # get shap values
 # NEED to cache these shap values
 @st.experimental_memo
-def get_shap_values(_fitted_model, feature_set):
-    explainer = TreeExplainer(_fitted_model)
-    shap_values = explainer(feature_set) # get shap values for all colleges
-    # example below:
-    # explainer = TreeExplainer(rf)
-    # shap_values = explainer(X_filled) # get shap values for all colleges
+def get_shap_values(file_name):  #(_fitted_model, feature_set):
+    # explainer = TreeExplainer(_fitted_model)
+    # shap_values = explainer(feature_set) # get shap values for all colleges
+    # above takes several minutes
+    # faster: read in shap values from pickle
+    fileObj = open(file_name, 'rb')
+    shap_values = pickle.load(fileObj)
+    fileObj.close()
     return shap_values
 
-# TODO: add ability to switch models based on chosen response variable
-shap_values = get_shap_values(_fitted_model=rf,feature_set=X_filled) if outcome == 6 else get_shap_values(_fitted_model=rf10,feature_set=X_filled10)
+# add ability to switch models based on chosen response variable
+# with pickle values, this only takes a few seconds (rather than several minutes)
+shap_values = get_shap_values("./saved_data/shap_values6.obj") if outcome == 6 else get_shap_values("./saved_data/shap_values10.obj")
 school_inds = X_filled.index if outcome == 6 else X_filled10.index
 # APP continued
 
@@ -104,7 +108,7 @@ with tab1:
     idx_of_interest = np.argwhere(school_inds == f'{school}')[0][0]
     school_fig, ax1 = plt.subplots(1,1)
     shap.plots.waterfall(shap_values[idx_of_interest],show=False,
-                         max_display = 15,)
+                         max_display = 15)
     plt.title(f'{school} Expected Income {outcome}-years Post Graduation: Explained')
     # plt.xlim([30000,100000])
     # plt.show()
@@ -115,8 +119,8 @@ with tab2:
     st.header("Feature Contribution Summary")
     disp_feat = st.selectbox('Select a feature to display', options=X_filled.columns.sort_values())
     st.subheader(f'Scatterplot of {disp_feat} Contribution')
-    shap.plots.scatter(shap_values[:, f'{disp_feat}'],show=True,
-                       ylabel = "Expected Income contribution")
+    shap.plots.scatter(shap_values[:, f'{disp_feat}'],show=True)
+    plt.ylabel("Expected Contribution to post-entry Income")
     st.pyplot(plt.gcf())
 
     # if time: add interaction plot
