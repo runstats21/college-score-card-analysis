@@ -59,16 +59,17 @@ def data_import():
 
 X_filled,Xtrain_filled,ytrain,X_filled10,Xtrain_filled10,ytrain10 = data_import()
 
+# for now can comment this out, as shap values read in from pickle
 # train chosen model(s)
-@st.experimental_singleton
-def model_fit(X,y):
-    rf = RandomForestRegressor(n_estimators=200, criterion='squared_error', max_features="sqrt").fit(X,y)
-    # rf10 = RandomForestRegressor(n_estimators=150, criterion='squared_error').fit(Xtrain_filled,ytrain10)
-    # NOTE: 10 year measures still have a few missing values. FIXME
-    return rf
+# @st.experimental_singleton
+# def model_fit(X,y):
+#     rf = RandomForestRegressor(n_estimators=200, criterion='squared_error', max_features="sqrt").fit(X,y)
+#     # rf10 = RandomForestRegressor(n_estimators=150, criterion='squared_error').fit(Xtrain_filled,ytrain10)
+#     # NOTE: 10 year measures still have a few missing values. FIXME
+#     return rf
 
-rf = model_fit(Xtrain_filled,ytrain)
-rf10 = model_fit(Xtrain_filled10,ytrain10)
+# rf = model_fit(Xtrain_filled,ytrain)
+# rf10 = model_fit(Xtrain_filled10,ytrain10)
 # if time: could also fit quantile regressor! and get ci's of expected income for each school
 
 # get shap values
