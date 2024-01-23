@@ -74,7 +74,8 @@ X_filled,Xtrain_filled,ytrain,X_filled10,Xtrain_filled10,ytrain10 = data_import(
 # get shap values
 # NEED to cache these shap values
 @st.experimental_memo
-def get_shap_values(file_name):  #(_fitted_model, feature_set):
+def get_shap_values(file_name):  
+    #(_fitted_model, feature_set):
     # explainer = TreeExplainer(_fitted_model)
     # shap_values = explainer(feature_set) # get shap values for all colleges
     # above takes several minutes
@@ -109,7 +110,7 @@ with tab1:
                           label_visibility="visible")
     idx_of_interest = np.argwhere(school_inds == f'{school}')[0][0]
     school_fig, ax1 = plt.subplots(1,1)
-    shap.plots.waterfall(shap_values[idx_of_interest],show=False,
+    shap.plots.waterfall(shap_values[idx_of_interest],show=True,
                          max_display = 15)
     plt.title(f'{school} Expected Income {outcome}-years Post Graduation: Explained')
     # plt.xlim([30000,100000])
