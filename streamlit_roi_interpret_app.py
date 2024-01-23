@@ -65,7 +65,6 @@ X_filled,Xtrain_filled,ytrain,X_filled10,Xtrain_filled10,ytrain10 = data_import(
 # def model_fit(X,y):
 #     rf = RandomForestRegressor(n_estimators=200, criterion='squared_error', max_features="sqrt").fit(X,y)
 #     # rf10 = RandomForestRegressor(n_estimators=150, criterion='squared_error').fit(Xtrain_filled,ytrain10)
-#     # NOTE: 10 year measures still have a few missing values. FIXME
 #     return rf
 
 # rf = model_fit(Xtrain_filled,ytrain)
@@ -87,7 +86,9 @@ def get_shap_values(file_name):  #(_fitted_model, feature_set):
 
 # add ability to switch models based on chosen response variable
 # with pickle values, this only takes a few seconds (rather than several minutes)
-shap_values = get_shap_values("./saved_data/shap_values6.obj") if outcome == 6 else get_shap_values("./saved_data/shap_values10.obj")
+shap_values6 = get_shap_values("./saved_data/shap_values6.obj")
+shap_values10 = get_shap_values("./saved_data/shap_values10.obj")
+shap_values = shap_values6 if outcome == 6 else shap_values10
 school_inds = X_filled.index if outcome == 6 else X_filled10.index
 # APP continued
 
