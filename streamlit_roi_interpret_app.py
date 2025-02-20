@@ -112,7 +112,7 @@ with tab1:
     school_fig, ax1 = plt.subplots(1,1)
     shap.plots.waterfall(shap_values[idx_of_interest],show=True,
                          max_display = 15)
-    plt.title(f'{school} Expected Income {outcome}-years Post Graduation: Explained')
+    plt.title(f'{school} Expected Income {outcome}-years Post Entry: Explained')
     # plt.xlim([30000,100000])
     # plt.show()
     st.pyplot(school_fig)
